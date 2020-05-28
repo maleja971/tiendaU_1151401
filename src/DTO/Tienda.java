@@ -20,19 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 
-@Table(name = "tienda")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Tienda.findAll", query = "SELECT t FROM Tienda t")
-    , @NamedQuery(name = "Tienda.findById", query = "SELECT t FROM Tienda t WHERE t.id = :id")
-    , @NamedQuery(name = "Tienda.findByNombre", query = "SELECT t FROM Tienda t WHERE t.nombre = :nombre")
-    , @NamedQuery(name = "Tienda.findByLema", query = "SELECT t FROM Tienda t WHERE t.lema = :lema")
-    , @NamedQuery(name = "Tienda.findByEmail", query = "SELECT t FROM Tienda t WHERE t.email = :email")
-    , @NamedQuery(name = "Tienda.findByClave", query = "SELECT t FROM Tienda t WHERE t.clave = :clave")
-    , @NamedQuery(name = "Tienda.findByPropietario", query = "SELECT t FROM Tienda t WHERE t.propietario = :propietario")
-    , @NamedQuery(name = "Tienda.findByFacebook", query = "SELECT t FROM Tienda t WHERE t.facebook = :facebook")
-    , @NamedQuery(name = "Tienda.findByWeb", query = "SELECT t FROM Tienda t WHERE t.web = :web")
-    , @NamedQuery(name = "Tienda.findByImagen", query = "SELECT t FROM Tienda t WHERE t.imagen = :imagen")})
+
 public class Tienda implements Serializable {
 
     private static final long serialVersionUID = 1L;
