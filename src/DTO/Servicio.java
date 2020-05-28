@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package DTO;
 
 import java.io.Serializable;
@@ -22,31 +18,19 @@ import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
-@Entity
-@Table(name = "servicio")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Servicio.findAll", query = "SELECT s FROM Servicio s")
-    , @NamedQuery(name = "Servicio.findById", query = "SELECT s FROM Servicio s WHERE s.id = :id")
-    , @NamedQuery(name = "Servicio.findByNombre", query = "SELECT s FROM Servicio s WHERE s.nombre = :nombre")})
 
 public class Servicio implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id")
+  
     private Integer id;
-    @Basic(optional = false)
-    
-    @Column(name = "nombre")
+  
     private String nombre;
-    @Basic(optional = false)
+
    
-    @Column(name = "descripcion")
+    
     private String descripcion;
-    @JoinColumn(name = "tienda", referencedColumnName = "id")
+   
    
     private Tienda tienda;
 
